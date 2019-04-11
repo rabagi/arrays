@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Test</title>
+</head>
+<body>
+<h1>Javascript</h1>
+<section>
+    <h3 id="parrafo"></h3>
+    <strong>Original</strong>
+    <p id="array"></p>
+    <strong>Remover ultimo</strong>
+    <p id="removeLast"></p>[<b id="removeLastArray"></b>]
+    <br><br>
+    <strong>Remover primero</strong>
+    <p id="removeFirst"></p>[<b id="removeFirstArray"></b>]
+    <br><br>
+    <strong>Agregar ultimo</strong>
+    <p id="addLast"></p>[<b id="addLastArray"></b>]
+    <br><br>
+    <strong>Agregar inicio</strong>
+    <p id="addFirst"></p>[<b id="addFirstArray"></b>]
+    <br><br>
+    <strong>Agregar Remover</strong>
+    <p id="addAndRemove"></p>[<b id="addAndRemoveArray"></b>]
+</section>
+</body>
+</html>
+
+<script type="text/javascript">
+var variable = 'Javascript: metodos esenciales de arrays';
+console.log("variable var = ", variable);
+document.getElementById("parrafo").innerHTML = variable;
+
+
+const array = [];
+const array2 = [1,2,3];
+document.getElementById("array").innerHTML = array2;
+
+
+const removeLast = array2.pop();
+document.getElementById("removeLast").innerHTML = removeLast;
+document.getElementById("removeLastArray").innerHTML = array2;
+//console.log(removeLast);
+
+
+const removeFirst = array2.shift();
+document.getElementById("removeFirst").innerHTML = removeFirst;
+document.getElementById("removeFirstArray").innerHTML = array2;
+
+const addLast = array2.push(10);
+document.getElementById("addLast").innerHTML = addLast;
+document.getElementById("addLastArray").innerHTML = array2;
+
+const addFirst = array2.unshift(20);
+document.getElementById("addFirst").innerHTML = addFirst;
+document.getElementById("addFirstArray").innerHTML = array2;
+
+/// remueve-agrega (inicia, cantidadBorrados, elementoAgregar)
+const addAndRemove = array2.splice(1, 1, 'agregado');
+document.getElementById("addAndRemove").innerHTML = addAndRemove;
+document.getElementById("addAndRemoveArray").innerHTML = array2;
+
+</script>
